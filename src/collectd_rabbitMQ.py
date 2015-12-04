@@ -37,7 +37,10 @@ SUB_METRIC={
     'messages_ready_details' : True,
     'messages_unacknowledged_details' : True
 }
+
 """Sample json ouput from RESTFul API http://localhost:55672/api/queues/vhost/"""
+sample_result = """
+"""
 
 MESSAGES_STATS = {
     'ack' : True,
@@ -85,102 +88,7 @@ METRIC_KEY_TRUNCATE={
     'backing_queue_status-ram_ack_count'            : 'back_q_st-ram_ack_count',
     'backing_queue_status-ram_msg_count'            : 'back_q_st-ram_msg_count'
 }
-sample_result = """
-[
-    {
-        "arguments": {
-            "x-dead-letter-exchange": "",
-            "x-dead-letter-routing-key": "dlq_ruleevent_p6",
-            "x-ha-policy": "all"
-        },
-        "auto_delete": false,
-        "backing_queue_status": {
-            "avg_ack_egress_rate": 9.490264211890793,
-            "avg_ack_ingress_rate": 9.490264211890793,
-            "avg_egress_rate": 9.490264211890793,
-            "avg_ingress_rate": 9.490264211890793,
-            "delta": [
-                "delta",
-                "undefined",
-                0,
-                "undefined"
-            ],
-            "len": 0,
-            "mirror_seen": 0,
-            "mirror_senders": 55,
-            "next_seq_id": 101415599,
-            "pending_acks": 0,
-            "persistent_count": 0,
-            "q1": 0,
-            "q2": 0,
-            "q3": 0,
-            "q4": 0,
-            "ram_ack_count": 0,
-            "ram_msg_count": 625082,
-            "target_ram_count": "infinity"
-        },
-        "consumers": 8,
-        "durable": true,
-        "exclusive_consumer_tag": "",
-        "memory": 16024016,
-        "message_stats": {
-            "ack": 193335,
-            "ack_details": {
-                "interval": 6865961,
-                "last_event": 1448898526514,
-                "rate": 8.234598202652839
-            },
-            "deliver": 193335,
-            "deliver_details": {
-                "interval": 6865961,
-                "last_event": 1448898526514,
-                "rate": 8.234598202652839
-            },
-            "deliver_get": 193335,
-            "deliver_get_details": {
-                "interval": 6865961,
-                "last_event": 1448898526514,
-                "rate": 8.234598202652839
-            },
-            "publish": 955,
-            "publish_details": {
-                "interval": 225472995,
-                "last_event": 1448898529620,
-                "rate": 8.974702667095691
-            }
-        },
-        "messages": 0,
-        "messages_details": {
-            "interval": 5099992,
-            "last_event": 1448898528828,
-            "rate": 0.0
-        },
-        "messages_ready": 0,
-        "messages_ready_details": {
-            "interval": 5099992,
-            "last_event": 1448898528828,
-            "rate": 0.0
-        },
-        "messages_unacknowledged": 0,
-        "messages_unacknowledged_details": {
-            "interval": 5099992,
-            "last_event": 1448898528828,
-            "rate": 0.0
-        },
-        "name": "ruleevent_p6",
-        "node": "rabbit@lyra-rabbitmq3",
-        "slave_nodes": [
-            "rabbit@lyra-rabbitmq1",
-            "rabbit@lyra-rabbitmq2"
-        ],
-        "synchronised_slave_nodes": [
-            "rabbit@lyra-rabbitmq2",
-            "rabbit@lyra-rabbitmq1"
-        ],
-        "vhost": "leto"
-    }
-]  
-"""
+
 
 class RabbitMQ(object):
 
