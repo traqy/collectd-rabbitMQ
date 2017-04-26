@@ -39,18 +39,15 @@
 
 ## Debugging
 * Modify python scripts src/collectd_rabbitMQ.py and change DEBUG=False to DEBUG=True
-  
-  ```
+```
 DEBUG=True
 ```
-* Testing of the python script without deploying it as collectd python plugin
 
-  ```
+* Testing of the python script without deploying it as collectd python plugin
+```
 python src/collectd_rabbitMQ.py -h
 Usage:
         collectd_rabbitMQ.py
-
-
 Options:
   -h, --help            show this help message and exit
   --plugin-name=PLUGIN_NAME
@@ -60,10 +57,10 @@ Options:
   --password=PASSWORD   Password credential. Default guest.
   --vhost=VHOST         Virtual host. Default /
 ```
-* Example command line executions
- * Default
 
-  ```
+* Example command line executions
+
+```
 python src/collectd_rabbitMQ.py | python -mjson.tool
 [
 {
