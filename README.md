@@ -31,9 +31,10 @@
         </Module>
 </Plugin>
 ```
+
 * Copy src/collect_rabbitMQ.py to your desired path. But in the above configuration, copy the python collectd_rabbitMQ.py to /usr/local/collectd/plugins/
 
-  ```
+```
   cp src/collectd_rabbitMQ.py /usr/local/collectd/plugins/
 ```
 
