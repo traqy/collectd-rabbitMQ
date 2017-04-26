@@ -1,8 +1,9 @@
 # Usage
 ## Setup and deploy as collectd plugin
+
 * Configuration /etc/collectd.d/rabbitMQ.conf
 
-  ```
+```
 <LoadPlugin python>
         Globals true
 </LoadPlugin>
